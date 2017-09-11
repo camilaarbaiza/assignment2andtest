@@ -52,9 +52,30 @@ public class Assignment2 {
                 total = subtotal + gratuity;
 
                 //Print out output
-                System.out.println("The gratuity is: $" + gratuity + " and the total is: $" + total);
+                System.out.printf("The gratuity is: $%.2f", gratuity);
+                System.out.printf(" and the total is: $%.2f",total);
 
             }
         }
     }
+
+    /**
+     * Method to test with Junit
+     * The displayTipsAndTotal method calculates the gratuity and the total
+     * @param x  subtotal entered
+     * @param y  rate of gratuity
+     * @return   String that displays the gratutity and total
+     */
+    public static String displayTipsAndTotal(double x, int y){
+
+        double g = 0;
+        double t = 0;
+
+            g = ((double)y / 100) * x;
+
+            // calculations
+            t = x + g;
+
+   return("The gratuity is: $"+g+" and the total is: $" +t); }
+
 }
